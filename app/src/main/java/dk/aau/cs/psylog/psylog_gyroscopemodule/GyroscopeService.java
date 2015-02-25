@@ -5,34 +5,27 @@ import android.content.Intent;
 import android.os.IBinder;
 
 public class GyroscopeService extends Service {
-  private GyroscopeListener gyroscopeListener;
-  private boolean isRunning;
+    private GyroscopeListener gyroscopeListener;
 
-  public GyroscopeService() { }
-
-  @Override
-  public int onStartCommand(Intent intent, int flags, int startId) {
-    if (!isRunning) {
-      isRunning = true;
-      gyroscopeListener = new GyroscopeListener(this);
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        gyroscopeListener.startSensor();
+        return Service.START_NOT_STICKY;
     }
 
-    return Service.START_NOT_STICKY;
-  }
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        gyroscopeListener = new GyroscopeListener(this);
+    }
 
-  @Override
-  public void onCreate() {
-    super.onCreate();
-    isRunning = false;
-  }
+    @Override
+    public void onDestroy() {
+        gyroscopeListener.stopSensor();
+    }
 
-  @Override
-  public void onDestroy() {
-    gyroscopeListener.stopSensor();
-  }
-
-  @Override
-  public IBinder onBind(Intent intent) {
-    return null;
-  }
+    @Override
+    public IBinder onBind(Intent intent) {
+        return null;
+    }
 }

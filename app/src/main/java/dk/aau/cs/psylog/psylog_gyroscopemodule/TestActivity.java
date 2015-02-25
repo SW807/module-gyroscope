@@ -10,27 +10,27 @@ import android.widget.ToggleButton;
 
 
 public class TestActivity extends ActionBarActivity {
-  Intent intent;
+    Intent intent;
 
-  @Override
-  protected void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-    intent = new Intent(this, GyroscopeService.class);
+        intent = new Intent(this, GyroscopeService.class);
 
-    ToggleButton btn = new ToggleButton(this);
-    btn.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
-        boolean on = ((ToggleButton) v).isChecked();
+        ToggleButton btn = new ToggleButton(this);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean on = ((ToggleButton) v).isChecked();
 
-        if (on)
-          startService(intent);
-        else
-          stopService(intent);
-      }
-    });
+                if (on)
+                    startService(intent);
+                else
+                    stopService(intent);
+            }
+        });
 
-    setContentView(btn);
-  }
+        setContentView(btn);
+    }
 }
