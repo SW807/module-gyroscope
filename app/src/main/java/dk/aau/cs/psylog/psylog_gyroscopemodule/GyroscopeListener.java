@@ -6,8 +6,9 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.util.Log;
+import dk.aau.cs.psylog.module_lib.ISensor;
 
-public class GyroscopeListener implements SensorEventListener {
+public class GyroscopeListener implements SensorEventListener, ISensor {
 
     private SensorManager sensorManager;
     private Sensor sensor;
