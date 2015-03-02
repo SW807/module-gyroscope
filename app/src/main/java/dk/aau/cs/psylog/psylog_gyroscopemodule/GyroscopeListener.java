@@ -1,6 +1,7 @@
 package dk.aau.cs.psylog.psylog_gyroscopemodule;
 
 import android.content.Context;
+import android.content.Intent;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -12,6 +13,8 @@ public class GyroscopeListener implements SensorEventListener, ISensor {
 
     private SensorManager sensorManager;
     private Sensor sensor;
+
+    private int sensorDelay;
 
     public GyroscopeListener(Context context) {
         sensorManager = (SensorManager) context.getSystemService(Context.SENSOR_SERVICE);
@@ -36,10 +39,15 @@ public class GyroscopeListener implements SensorEventListener, ISensor {
     }
 
     public void startSensor() {
-        sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_FASTEST);
+        sensorManager.registerListener(this, sensor, sensorDelay);
     }
 
     public void stopSensor() {
         sensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void sensorParameters(Intent intent) {
+        sensorDelay = intent.getIntExtra("sensorDelay",3); //default set to slowest update
     }
 }
