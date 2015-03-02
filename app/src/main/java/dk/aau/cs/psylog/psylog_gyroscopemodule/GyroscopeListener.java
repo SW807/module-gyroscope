@@ -39,6 +39,7 @@ public class GyroscopeListener implements SensorEventListener, ISensor {
     }
 
     public void startSensor() {
+        sensorManager.unregisterListener(this);
         sensorManager.registerListener(this, sensor, sensorDelay);
     }
 
