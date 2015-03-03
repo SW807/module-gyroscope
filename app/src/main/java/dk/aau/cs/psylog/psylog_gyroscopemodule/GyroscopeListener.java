@@ -49,6 +49,6 @@ public class GyroscopeListener implements SensorEventListener, ISensor {
 
     @Override
     public void sensorParameters(Intent intent) {
-        sensorDelay = intent.getIntExtra("sensorDelay",3); //default set to slowest update
+        sensorDelay = intent.getIntExtra("sensorDelay", SensorManager.SENSOR_DELAY_NORMAL); //default set to slowest update
     }
 }
