@@ -3,8 +3,6 @@ package dk.aau.cs.psylog.psylog_gyroscopemodule;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ToggleButton;
 
@@ -16,7 +14,7 @@ public class TestActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        intent = new Intent(this, GyroscopeService.class);
+        intent = new Intent(this, Service.class);
 
         ToggleButton btn = new ToggleButton(this);
         btn.setOnClickListener(new View.OnClickListener() {
