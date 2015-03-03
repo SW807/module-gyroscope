@@ -1,2 +1,5 @@
-﻿# Allow the .name file
+﻿# Exceptions to the .idea directory
+*
 !.name
+!compiler.xml
+!.gitignore
