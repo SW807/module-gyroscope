@@ -14,7 +14,7 @@ public class TestActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        intent = new Intent(this, Service.class);
+        intent = new Intent(this, PsyLogService.class);
 
         ToggleButton btn = new ToggleButton(this);
         btn.setOnClickListener(new View.OnClickListener() {
