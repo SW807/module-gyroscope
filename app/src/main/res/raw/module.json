@@ -1,0 +1,17 @@
+{
+	"name": "gyroscope",
+	"_version": 1.0,
+	"tables": [
+		{
+		"name": "gyroscope",
+		"columns": [
+			{ "name": "rotationX", "dataType": "REAL", "_unit": "radians/second" },
+			{ "name": "rotationY", "dataType": "REAL", "_unit": "radians/second" },
+			{ "name": "rotationZ", "dataType": "REAL", "_unit": "radians/second" },
+			{ "name": "driftX", "dataType": "REAL", "_unit": "radians/second" },
+			{ "name": "driftY", "dataType": "REAL", "_unit": "radians/second" },
+			{ "name": "driftZ", "dataType": "REAL", "_unit": "radians/second" }
+			]
+		}
+	]
+}
