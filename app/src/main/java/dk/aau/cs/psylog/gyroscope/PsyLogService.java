@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.psylog_gyroscopemodule;
+package dk.aau.cs.psylog.gyroscope;
 
 import dk.aau.cs.psylog.module_lib.SuperService;
 
