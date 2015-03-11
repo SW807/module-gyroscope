@@ -1,16 +1,13 @@
 {
 	"name": "gyroscope",
-	"_version": 1.0,
+	"_version": 1.1,
 	"tables": [
 		{
 		"name": "gyroscope",
 		"columns": [
-			{ "name": "rotationX", "dataType": "REAL", "_unit": "radians/second" },
-			{ "name": "rotationY", "dataType": "REAL", "_unit": "radians/second" },
-			{ "name": "rotationZ", "dataType": "REAL", "_unit": "radians/second" },
-			{ "name": "driftX", "dataType": "REAL", "_unit": "radians/second" },
-			{ "name": "driftY", "dataType": "REAL", "_unit": "radians/second" },
-			{ "name": "driftZ", "dataType": "REAL", "_unit": "radians/second" }
+			{ "name": "roll", "dataType": "REAL", "_unit": "radians/second" },
+			{ "name": "pitch", "dataType": "REAL", "_unit": "radians/second" },
+			{ "name": "yaw", "dataType": "REAL", "_unit": "radians/second" }
 			]
 		}
 	]
