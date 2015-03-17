@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.gyroscope;
+package dk.aau.cs.psylog.sensor.gyroscope;
 
 import android.content.ContentResolver;
 import android.content.ContentValues;

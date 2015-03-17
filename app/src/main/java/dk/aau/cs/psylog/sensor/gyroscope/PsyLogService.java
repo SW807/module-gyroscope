@@ -1,4 +1,4 @@
-package dk.aau.cs.psylog.gyroscope;
+package dk.aau.cs.psylog.sensor.gyroscope;
 
 import dk.aau.cs.psylog.module_lib.SensorService;
 
