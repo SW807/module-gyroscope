@@ -34,7 +34,7 @@ public class GyroscopeListener implements SensorEventListener, ISensor {
             float pitch = event.values[1];
             float roll = event.values[2];
 
-            Uri uri = Uri.parse(DBAccessContract.DBACCESS_CONTENTPROVIDER + "gyroscope");
+            Uri uri = Uri.parse(DBAccessContract.DBACCESS_CONTENTPROVIDER + "gyroscope_gyroscope");
             ContentValues values = new ContentValues();
             values.put("roll", roll);
             values.put("pitch", pitch);
